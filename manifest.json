@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Google Background Changer",
+  "version": "1.0",
+  "description": "ワンタッチで Google の背景を好きな画像に変更",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Google 背景変更"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
